@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/dist/src/store.js" />
+        <item url="file://$PROJECT_DIR$/dist/.eslintrc.js" />
+        <item url="file://$PROJECT_DIR$/dist/dist/static/js/manifest.e993ae8cf547fd636bf4.js" />
+        <item url="file://$PROJECT_DIR$/dist/dist/static/js/app.595b91718d15308a197c.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/dist/src/store.js" />
+      <root url="file://$PROJECT_DIR$/dist/.eslintrc.js" />
+      <root url="file://$PROJECT_DIR$/dist/dist/static/js/manifest.e993ae8cf547fd636bf4.js" />
+      <root url="file://$PROJECT_DIR$/dist/dist/static/js/app.595b91718d15308a197c.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>

@@ -3,7 +3,7 @@
     <h1 v-html='title'></h1>
     <input v-model="newItem" @keyup.enter="addNew(newItem)"/>
     <ul>
-      <li v-for="item in items" v-bind:class="{finished: item.isFinished}" @click="toggleFinish(item)">
+      <li v-for="item in items" :class="{finished: item.isFinished}" @click="toggleFinish(item)">
         {{item.label+'------'+item.isFinished}}
       </li>
     </ul>
@@ -11,17 +11,28 @@
 </template>
 
 <script>
+import store from './store'
+
 export default {
   data: function () {
     return {
-      title: 'this is a todo list',
-      items: [],
+      title: 'my todo list',
+      items: store.fetch(),
       newItem: ''
+    }
+  },
+  watch: {
+    items: {
+      handler: function (items, oldVal) {
+        console.dir(items)
+        store.save(items)
+        console.dir(oldVal)
+      },
+      deep: true
     }
   },
   methods: {
     toggleFinish: function (item) {
-      console.log(item)
       item.isFinished = !item.isFinished
     },
     addNew: function (newItem) {
@@ -31,7 +42,7 @@ export default {
         isFinished: false
 
       })
-      console.log(this.newItem)
+//      console.log(this.newItem)
       this.newItem = ''
     }
   }
@@ -69,7 +80,9 @@ body {
   color: #42b983;
   text-decoration: none;
 }
-
+#app li{
+  list-style:none;
+}
 .logo {
   width: 100px;
   height: 100px
