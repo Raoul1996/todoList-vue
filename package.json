@@ -14,7 +14,7 @@
     "babel-runtime": "^6.0.0",
     "normalize.css": "^5.0.0",
     "store.js": "file://node_modules\\store.js",
-    "vue": "^1.0.21"
+    "vue": "^2.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",
